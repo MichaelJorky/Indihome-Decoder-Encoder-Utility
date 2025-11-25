@@ -131,11 +131,11 @@ python encoder.py --help
 ## 🛠 Roadmap Development
 
 * **Decoder v2** → Versi saat ini, mendukung metode: `normal`, `skip145`, `trykeys`, auto-check login, verbose & log file.
-* **Encoder v3** → Sedang dikembangkan untuk menggantikan encoder lama. Fitur:
+* **Encoder v2** → Sedang dikembangkan untuk menggantikan encoder lama. Fitur:
 
   * Unified encoder (`encoder.py`)
   * Mendukung semua router kompatibel
-  * GUI versi aplikasi (opsional)
+  * GUI versi aplikasi
 
 ---
 
