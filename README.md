@@ -141,7 +141,7 @@ python encoder.py --help
 
 ### ✅ Tips Cross-Platform
 
-* Folder `.zte-decoder` adalah lokasi default untuk decoder.py & encoder.py setelah instalasi.
+* Folder `.indihome-utility` adalah lokasi default untuk decoder.py & encoder.py setelah instalasi.
 * Gunakan **Python 3.5+**.
 * Untuk Android Termux, gunakan prefix `python` atau `python3` sesuai versi.
 * URL di contoh perintah (`http://192.168.1.1`) ditulis **inline code** supaya tidak menjadi link otomatis.
