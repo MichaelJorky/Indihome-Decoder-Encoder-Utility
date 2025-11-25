@@ -152,7 +152,7 @@ python decoder.py --help
 
 ## 🔐 Encoder
 
-🚧 **Coming Soon** — Encoder versi terbaru (v3) sedang dalam pengembangan.
+🚧 **Coming Soon** — Encoder versi terbaru (v2) sedang dalam pengembangan.
 Fitur baru akan diumumkan setelah implementasi selesai.
 
 Untuk referensi opsi sementara / development:
