@@ -3,7 +3,7 @@
 > ⚠️ **Peringatan**
 > Alat ini dibuat **hanya untuk keperluan pendidikan dan penelitian**.
 > Penulis **tidak bertanggung jawab** atas penyalahgunaan, kerusakan perangkat, maupun kerugian lain yang disebabkan oleh penggunaan tool ini.
-> Gunakan **hanya pada perangkat milik Anda sendiri** atau perangkat yang Anda miliki izin eksplisit untuk mengaksesnya.
+> Gunakan hanya pada perangkat milik Anda atau yang Anda memiliki izin untuk mengaksesnya.
 
 Tool ini digunakan untuk **mendecode dan mengencode file konfigurasi** dari router Indihome (Fiberhome, Huawei, ZTE).
 
