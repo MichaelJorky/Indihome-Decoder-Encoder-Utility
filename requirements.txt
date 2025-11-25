@@ -1,6 +1,5 @@
 pycryptodome
 pycryptodomex
-selenium
 requests
 impacket
 colorama
