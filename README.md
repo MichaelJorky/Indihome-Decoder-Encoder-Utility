@@ -38,23 +38,7 @@ python setup.py install
 ```
 Contoh: ```python decoder3.py config/config.bin config/config.xml```
 #
-<b>[ Auto Install di Windows ]</b>
-
-Kloning atau Download Repo/Folder ini
-```
-python -m pip install setuptools
-```
-```
-git clone https://github.com/MichaelJorky/indihome-router-decoder.git .zte-decoder
-```
-```
-cd .zte-decoder
-```
-```
-python setup.py install
-```
-#
-<b>[ Manual Install di Windows ]</b>
+<b>[ Cara Install di Windows ]</b>
 
 1. Login ke router via web browser misal ip routernya 192.168.1.1 lalu login menggunakan username: admin password: admin atau username: user password: user (tinggal disesuaikan untuk loginnya) lalu backup confignya
 
