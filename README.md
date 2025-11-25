@@ -23,7 +23,7 @@ termux-setup-storage
 pkg install mc  # optional: file manager terminal
 pkg install git python python-pip
 python -m pip install --upgrade pip setuptools
-git clone https://github.com/MichaelJorky/indihome-router-decoder.git .zte-decoder
+git clone https://github.com/MichaelJorky/Indihome-Decoder-Encoder-Utility.git .zte-decoder
 cd .zte-decoder
 python setup.py install
 ```
@@ -31,7 +31,7 @@ python setup.py install
 ### **2. Windows**
 
 ```bash
-git clone https://github.com/MichaelJorky/indihome-router-decoder.git .zte-decoder
+git clone https://github.com/MichaelJorky/Indihome-Decoder-Encoder-Utility.git .zte-decoder
 cd .zte-decoder
 python -m pip install --upgrade pip
 python -m pip install pycryptodome pycryptodomex setuptools selenium
@@ -45,7 +45,7 @@ python setup.py install
 sudo apt update
 sudo apt install python3 python3-pip git
 python3 -m pip install --user --upgrade pip setuptools pycryptodome pycryptodomex selenium
-git clone https://github.com/MichaelJorky/indihome-router-decoder.git ~/.zte-decoder
+git clone https://github.com/MichaelJorky/Indihome-Decoder-Encoder-Utility.git ~/.zte-decoder
 cd ~/.zte-decoder
 python3 setup.py install --user
 ```
