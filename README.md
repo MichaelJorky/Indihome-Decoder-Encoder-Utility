@@ -5,88 +5,52 @@
 > Penulis **tidak bertanggung jawab** atas penyalahgunaan, kerusakan perangkat, maupun kerugian lain yang disebabkan oleh penggunaan tool ini.
 > Gunakan **hanya pada perangkat milik Anda sendiri** atau perangkat yang Anda miliki izin eksplisit untuk mengaksesnya.
 
-Utilitas ini digunakan untuk **mendecode dan mengencode file konfigurasi** dari router Indihome (Fiberhome, Huawei, dan ZTE).
+Tool ini digunakan untuk **mendecode dan mengencode file konfigurasi** dari router Indihome (Fiberhome, Huawei, ZTE).
 
-💡 **Versi aplikasi GUI tersedia di sini:**
-[https://github.com/MichaelJorky/Indihome-Router-Utility](https://github.com/MichaelJorky/Indihome-Router-Utility)
+💡 **GUI version tersedia di sini:**
+[Indihome Router Utility](https://github.com/MichaelJorky/Indihome-Router-Utility)
 
 ---
 
-## 📱 Instalasi
+## ⚙️ Instalasi
 
-### 1. Android (Termux)
+### **1. Android (Termux)**
 
 ```bash
 apt update
 apt install termux-api termux-am
 termux-setup-storage
-pkg install mc
-mc  # membuka file explorer berbasis terminal
+pkg install mc  # optional: file manager terminal
 pkg install git python python-pip
-python -m pip install setuptools
+python -m pip install --upgrade pip setuptools
 git clone https://github.com/MichaelJorky/indihome-router-decoder.git .zte-decoder
 cd .zte-decoder
 python setup.py install
 ```
 
-### 2. Windows
-
-1. Backup config router via browser (misal `192.168.1.1`) menggunakan:
-
-   * admin / admin
-   * user / user
-
-2. Catat informasi router:
-
-   * MAC: `AA:BB:CC:DD:EE:FF`
-   * Serial: `ZTE123456789`
-   * Model: `F670L`
-   * Signature: `ZXHN F670L V9.0`
-
-3. Instal Python & Git:
-
-   * Python: [https://www.python.org/downloads/](https://www.python.org/downloads/)
-   * Git: [https://git-scm.com/downloads](https://git-scm.com/downloads)
-
-4. Clone repository & instal dependencies:
+### **2. Windows**
 
 ```bash
 git clone https://github.com/MichaelJorky/indihome-router-decoder.git .zte-decoder
 cd .zte-decoder
+python -m pip install --upgrade pip
 python -m pip install pycryptodome pycryptodomex setuptools selenium
 python -m pip install -r requirements.txt
+python setup.py install
 ```
 
-5. Pindahkan file `config.bin` ke folder:
-
-```
-C:\Users\Nama_User\.zte-decoder\config\
-```
-
-6. Jalankan script:
-
-```bash
-cd .zte-decoder
-python decoder.py config/config.bin config/output.xml
-python encoder.py config/config.xml config/new.config.bin
-```
-
-### 3. Kali Linux / Linux
+### **3. Linux / Kali Linux**
 
 ```bash
 sudo apt update
 sudo apt install python3 python3-pip git
-python3 -m pip install --user setuptools pycryptodome pycryptodomex selenium
+python3 -m pip install --user --upgrade pip setuptools pycryptodome pycryptodomex selenium
 git clone https://github.com/MichaelJorky/indihome-router-decoder.git ~/.zte-decoder
 cd ~/.zte-decoder
-python3 setup.py install
+python3 setup.py install --user
 ```
 
-Menjalankan decoder sama seperti di Windows / Termux:
-
-```bash
-python3 decoder.py config/config.bin config/output.xml
-```
+> ✅ Setelah setup selesai, semua file (decoder.py & encoder.py) akan tersedia di folder lokal `.zte-decoder` dan bisa dijalankan langsung.
 
 ---
 
@@ -96,53 +60,51 @@ python3 decoder.py config/config.bin config/output.xml
 ZTE F670L, F609, F660, F450, F460, MF283, F663, GM220, F600W, H108N,
 H168N, H267A, H298N, H201L, H298Q, H298A, H268Q
 
-### 🆕 Contoh Perintah Decoder (Metode Terbaru)
+### **Contoh Perintah Decoder (v2)**
 
-**1. Auto Mode (Default): normal → skip145 → trykeys**
+**Auto mode (default)**
 
 ```bash
 python decoder.py config/config.bin config/output.xml
 ```
 
-**2. Mode Normal (baca header biasa)**
+**Normal mode (baca header biasa)**
 
 ```bash
 python decoder.py config/config.bin config/output.xml --mode normal
 ```
 
-**3. Paksa mode skip145 (mulai dari offset 145)**
+**Skip145 mode (mulai dari offset 145)**
 
 ```bash
 python decoder.py config/config.bin config/output.xml --mode skip145
 ```
 
-**4. Mode Aggressive: coba semua key & metode**
+**Trykeys mode (agresif, semua metode & key)**
 
 ```bash
 python decoder.py config/config.bin config/output.xml --mode trykeys
 ```
 
-**5. Aktifkan verbose logging**
+**Verbose logging**
 
 ```bash
 python decoder.py config/config.bin config/output.xml --verbose
 ```
 
-**6. Simpan log ke file**
+**Logfile**
 
 ```bash
 python decoder.py config/config.bin config/output.xml --log-file config/output.txt
 ```
 
-**7. Decode + auto-extract + auto-check login**
+**Decode + auto-extract + auto-check login**
 
 ```bash
 python decoder.py config/config.bin config/output.xml --check-login http://192.168.1.1
 ```
 
-### 📘 Daftar Opsi Lengkap Decoder
-
-Untuk opsi terbaru & lengkap:
+**Daftar opsi lengkap:**
 
 ```bash
 python decoder.py --help
@@ -152,10 +114,13 @@ python decoder.py --help
 
 ## 🔐 Encoder
 
-🚧 **Coming Soon** — Encoder versi terbaru (v2) sedang dalam pengembangan.
-Fitur baru akan diumumkan setelah implementasi selesai.
+🚧 **Coming Soon** – Encoder versi terbaru (v2) sedang dalam pengembangan.
 
-Untuk referensi opsi sementara / development:
+* Akan mendukung semua router kompatibel
+* Integrasi auto-check & auto-signature
+* Dinamis & unified (`encoder.py`)
+
+Daftar opsi sementara:
 
 ```bash
 python encoder.py --help
@@ -165,13 +130,18 @@ python encoder.py --help
 
 ## 🛠 Roadmap Development
 
-* **Decoder v2** → Versi saat ini, sudah mendukung metode terbaru `normal`, `skip145`, `trykeys`, auto-check login, verbose & log file.
-* **Encoder v2** → Sedang dikembangkan, akan menggantikan encoder lama. Fitur:
+* **Decoder v2** → Versi saat ini, mendukung metode: `normal`, `skip145`, `trykeys`, auto-check login, verbose & log file.
+* **Encoder v3** → Sedang dikembangkan untuk menggantikan encoder lama. Fitur:
 
-  * Dinamis & unified (`encoder.py`)
-  * Mendukung semua router yang kompatibel
-  * Integrasi auto-check & auto-signature
-  * GUI versi aplikasi
+  * Unified encoder (`encoder.py`)
+  * Mendukung semua router kompatibel
+  * GUI versi aplikasi (opsional)
 
 ---
 
+### ✅ Tips Cross-Platform
+
+* Folder `.zte-decoder` adalah lokasi default untuk decoder.py & encoder.py setelah instalasi.
+* Gunakan **Python 3.5+**.
+* Untuk Android Termux, gunakan prefix `python` atau `python3` sesuai versi.
+* URL di contoh perintah (`http://192.168.1.1`) ditulis **inline code** supaya tidak menjadi link otomatis.
