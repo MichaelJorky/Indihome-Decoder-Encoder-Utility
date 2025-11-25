@@ -23,16 +23,16 @@ termux-setup-storage
 pkg install mc  # optional: file manager terminal
 pkg install git python python-pip
 python -m pip install --upgrade pip setuptools
-git clone https://github.com/MichaelJorky/Indihome-Decoder-Encoder-Utility.git .zte-decoder
-cd .zte-decoder
+git clone https://github.com/MichaelJorky/Indihome-Decoder-Encoder-Utility.git .indihome-utility
+cd .indihome-utility
 python setup.py install
 ```
 
 ### **2. Windows**
 
 ```bash
-git clone https://github.com/MichaelJorky/Indihome-Decoder-Encoder-Utility.git .zte-decoder
-cd .zte-decoder
+git clone https://github.com/MichaelJorky/Indihome-Decoder-Encoder-Utility.git .indihome-utility
+cd .indihome-utility
 python -m pip install --upgrade pip
 python -m pip install pycryptodome pycryptodomex setuptools selenium
 python -m pip install -r requirements.txt
@@ -45,12 +45,12 @@ python setup.py install
 sudo apt update
 sudo apt install python3 python3-pip git
 python3 -m pip install --user --upgrade pip setuptools pycryptodome pycryptodomex selenium
-git clone https://github.com/MichaelJorky/Indihome-Decoder-Encoder-Utility.git ~/.zte-decoder
-cd ~/.zte-decoder
+git clone https://github.com/MichaelJorky/Indihome-Decoder-Encoder-Utility.git ~/.indihome-utility
+cd ~/.indihome-utility
 python3 setup.py install --user
 ```
 
-> ✅ Setelah setup selesai, semua file (decoder.py & encoder.py) akan tersedia di folder lokal `.zte-decoder` dan bisa dijalankan langsung.
+> ✅ Setelah setup selesai, semua file (decoder.py & encoder.py) akan tersedia di folder lokal `.indihome-utility` dan bisa dijalankan langsung.
 
 ---
 
