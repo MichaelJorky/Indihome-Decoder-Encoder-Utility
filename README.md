@@ -20,11 +20,11 @@ Tool ini digunakan untuk **mendecode dan mengencode file konfigurasi** dari rout
 apt update
 apt install termux-api termux-am
 termux-setup-storage
-pkg install mc  # optional: file manager terminal
 pkg install git python python-pip
-python -m pip install --upgrade pip setuptools
+python -m pip install --upgrade pip setuptools wheel
 git clone https://github.com/MichaelJorky/Indihome-Decoder-Encoder-Utility.git .indihome-utility
 cd .indihome-utility
+pip install -r requirements.txt
 python setup.py install
 ```
 
@@ -33,8 +33,7 @@ python setup.py install
 ```bash
 git clone https://github.com/MichaelJorky/Indihome-Decoder-Encoder-Utility.git .indihome-utility
 cd .indihome-utility
-python -m pip install --upgrade pip
-python -m pip install pycryptodome pycryptodomex setuptools selenium
+python -m pip install --upgrade pip setuptools wheel
 python -m pip install -r requirements.txt
 python setup.py install
 ```
@@ -44,9 +43,10 @@ python setup.py install
 ```bash
 sudo apt update
 sudo apt install python3 python3-pip git
-python3 -m pip install --user --upgrade pip setuptools pycryptodome pycryptodomex selenium
+python3 -m pip install --user --upgrade pip setuptools wheel
 git clone https://github.com/MichaelJorky/Indihome-Decoder-Encoder-Utility.git ~/.indihome-utility
 cd ~/.indihome-utility
+python3 -m pip install --user -r requirements.txt
 python3 setup.py install --user
 ```
 
