@@ -157,10 +157,10 @@ python3 setup.py install --user
 ## 🔓 Decoder
 
 **Kompatibel dengan router:**
-ZTE F670L, F609, F660, F450, F460, MF283, F663, GM220, F600W, H108N,
+F670L, F609, F660, F450, F460, MF283, F663, GM220, F600W, H108N,
 H168N, H267A, H298N, H201L, H298Q, H298A, H268Q
 
-### **Contoh Perintah Decoder (v2)**
+### **Contoh Perintah Dasar Decoder (v2)**
 
 **Auto mode (default)**
 
@@ -214,14 +214,85 @@ python decoder.py --help
 
 ## 🔐 Encoder
 
-🚧 **Coming Soon** – Encoder versi terbaru (v2) sedang dalam pengembangan.
+### **📦 Contoh Perintah Lengkap Encoder (Type 0 – 6) (v2)**
 
-* Akan mendukung semua router kompatibel
-* Integrasi auto-check & auto-signature
-* Dinamis & unified (`encoder.py`)
-
-Daftar opsi sementara:
-
+Semua contoh berikut memakai template asli:
+```
+--template config/config.bin
+```
+---
+#### **🟦 Type 0 — RAW (Tanpa Kompresi / Tanpa Enkripsi)**
+##### Raw tanpa kompresi
+```bash
+python encoder.py --template config/config.bin --xml config/output.xml --out config/type0_raw.bin --payload-type 0 --compress none --verbose
+```
+##### Dengan kompresi zlib (tetap tidak dienkripsi)
+```bash
+python encoder.py --template config/config.bin --xml config/output.xml --out config/type0_zlib.bin --payload-type 0 --verbose
+```
+---
+#### **🟩 Type 1 — Compressed Only (Tidak Dienkripsi)**
+##### zlib (default)
+```bash
+python encoder.py --template config/config.bin --xml config/output.xml --out config/type1_zlib.bin --payload-type 1 --verbose
+```
+##### LZMA compression
+```bash
+python encoder.py --template config/config.bin --xml config/output.xml --out config/type1_lzma.bin --payload-type 1 --compress lzma --verbose
+```
+---
+#### **🟧 Type 2 — AES-ECB**
+##### Key HEX
+```bash
+python encoder.py --template config/config.bin --xml config/output.xml --out config/type2_ecb.bin --payload-type 2 --key 11223344556677889912345678912345 --verbose
+```
+##### Key ASCII
+```bash
+python encoder.py --template config/config.bin --xml config/output.xml --out config/type2_ecb_ascii.bin --payload-type 2 --key my16bytekey1234 --verbose
+```
+---
+#### **🟨 Type 3 — AES-CBC (Variant 1)**
+Sama seperti Type-4, bedanya pada header format.
+##### Menggunakan serial + mac (KP derivation)
+```bash
+python encoder.py --template config/config.bin --xml config/output.xml --out config/type3_auto_kp.bin --payload-type 3 --serial ZTE123456789 --mac AA:BB:CC:11:22:33 --verbose
+```
+##### Key manual + IV manual
+```bash
+python encoder.py --template config/config.bin --xml config/output.xml --out config/type3_manual.bin --payload-type 3 --key 00112233445566778899AABBCCDDEEFF --iv 0102030405060708090A0B0C0D0E0F --verbose
+```
+---
+#### **🟥 Type 4 — AES-CBC (Variant 2, paling umum untuk GPON lama)**
+##### Menggunakan serial + mac (auto key derivation)
+```bash
+python encoder.py --template config/config.bin --xml config/output.xml --out config/type4_auto_kp.bin --payload-type 4 --serial ZTE123456789 --mac AA:BB:CC:11:22:33 --verbose
+```
+##### Key manual
+```bash
+python encoder.py --template config/config.bin --xml config/output.xml --out config/type4_manual.bin --payload-type 4 --key 11223344556677889900AABBCCDDEEFF --iv 000102030405060708090A0B0C0D0E0F --verbose
+```
+---
+#### **🟪 Type 5 — AES-CBC (Strict Manual Key/IV)**
+Tidak memakai KP derivation, wajib key manual.
+##### Key HEX + IV HEX
+```bash
+python encoder.py --template config/config.bin --xml config/output.xml --out config/type5_manual.bin --payload-type 5 --key 00112233445566778899AABBCCDDEEFF --iv 0102030405060708090A0B0C0D0E0F --verbose
+```
+##### Key ASCII + IV default
+```bash
+python encoder.py --template config/config.bin --xml config/output.xml --out config/type5_ascii.bin --payload-type 5 --key mysecretkey12345 --verbose
+```
+---
+#### **🟫 Type 6 — AES-CBC + Template Header Injection (GPON produksi baru)**
+##### Derivasi key via serial + mac
+```bash
+python encoder.py --template config/config.bin --xml config/output.xml --out config/type6_auto_kp.bin --payload-type 6 --serial ZTE123456789 --mac AA:BB:CC:11:22:33 --verbose
+```
+##### Manual key untuk Type-6
+```bash
+python encoder.py --template config/config.bin --xml config/output.xml --out config/type6_manual.bin --payload-type 6 --key 11223344556677889900AABBCCDDEEFF --verbose
+```
+**Daftar opsi lengkap:**
 ```bash
 python encoder.py --help
 ```
