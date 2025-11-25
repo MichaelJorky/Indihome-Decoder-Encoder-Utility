@@ -160,45 +160,45 @@ python3 setup.py install --user
 F670L, F609, F660, F450, F460, MF283, F663, GM220, F600W, H108N,
 H168N, H267A, H298N, H201L, H298Q, H298A, H268Q
 
-### **Contoh Perintah Dasar Decoder (v2)**
+### **Contoh Perintah Decoder (v2)**
 
-**Auto mode (default)**
+##### **Auto mode (default)**
 
 ```bash
 python decoder.py config/config.bin config/output.xml
 ```
 
-**Normal mode (baca header biasa)**
+##### **Normal mode (baca header biasa)**
 
 ```bash
 python decoder.py config/config.bin config/output.xml --mode normal
 ```
 
-**Skip145 mode (mulai dari offset 145)**
+##### **Skip145 mode (mulai dari offset 145)**
 
 ```bash
 python decoder.py config/config.bin config/output.xml --mode skip145
 ```
 
-**Trykeys mode (agresif, semua metode & key)**
+##### **Trykeys mode (agresif, semua metode & key)**
 
 ```bash
 python decoder.py config/config.bin config/output.xml --mode trykeys
 ```
 
-**Verbose logging**
+##### **Verbose logging**
 
 ```bash
 python decoder.py config/config.bin config/output.xml --verbose
 ```
 
-**Logfile**
+##### **Logfile**
 
 ```bash
 python decoder.py config/config.bin config/output.xml --log-file config/output.txt
 ```
 
-**Decode + auto-extract + auto-check login**
+##### **Decode + auto-extract + auto-check login**
 
 ```bash
 python decoder.py config/config.bin config/output.xml --check-login http://192.168.1.1
@@ -214,7 +214,7 @@ python decoder.py --help
 
 ## 🔐 Encoder
 
-### **📦 Contoh Perintah Lengkap Encoder (Type 0 – 6) (v2)**
+### **📦 Contoh Perintah Encoder (Type 0 – 6)/(v2)**
 
 Semua contoh berikut memakai template asli:
 ```
