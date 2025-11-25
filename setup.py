@@ -9,7 +9,7 @@ from setuptools import setup, find_packages
 # -----------------------------
 FILES_TO_DOWNLOAD = {
     "decoder.py": "https://github.com/MichaelJorky/Indihome-Decoder-Encoder-Utility/releases/download/v2.0.0-stable/decoder.py",
-    "encoder.py": "https://github.com/MichaelJorky/Indihome-Decoder-Encoder-Utility/releases/download/v2.0.0-stable/encoder.py"
+    "encoder.py": "https://github.com/MichaelJorky/Indihome-Decoder-Encoder-Utility/releases/download/v2.0.0-beta/encoder.py"
 }
 
 # Default install folder
@@ -64,3 +64,4 @@ setup(
         "Topic :: Utilities :: Networking"
     ]
 )
+
