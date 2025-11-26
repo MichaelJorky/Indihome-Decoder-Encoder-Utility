@@ -158,7 +158,7 @@ python3 setup.py install --user
 
 **Kompatibel dengan router:**
 F620, F660 V2, F670, F670L, F670 V2, F609, F660, F450, F460, MF283, F663, GM220, F600W, H108N,
-H168N, H267A, H298N, H201L, H298Q, H298A, H268Q
+H168N, H267A, H298N, H201L, H298Q, H298A, H268Q, F680, F688, OEM ZTE (Indihome, PLDT, GLOBE)
 
 ### **Contoh Perintah Decoder (v2)**
 
