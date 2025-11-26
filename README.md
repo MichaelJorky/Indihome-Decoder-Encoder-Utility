@@ -5,7 +5,7 @@
 > Penulis **tidak bertanggung jawab** atas penyalahgunaan, kerusakan perangkat, maupun kerugian lain yang disebabkan oleh penggunaan tool ini.
 > Gunakan hanya pada perangkat milik Anda atau yang Anda memiliki izin untuk mengaksesnya.
 
-Tool ini digunakan untuk **mendecode dan mengencode file konfigurasi** dari router Indihome (Fiberhome, Huawei, ZTE).
+Tool ini digunakan untuk **mendecode dan mengencode file konfigurasi** dari router ZTE Indihome.
 
 💡 **GUI version tersedia di sini:**
 [Indihome Router Utility](https://github.com/MichaelJorky/Indihome-Router-Utility)
@@ -157,7 +157,7 @@ python3 setup.py install --user
 ## 🔓 Decoder
 
 **Kompatibel dengan router:**
-F670L, F609, F660, F450, F460, MF283, F663, GM220, F600W, H108N,
+F620, F660 V2, F670, F670L, F670 V2, F609, F660, F450, F460, MF283, F663, GM220, F600W, H108N,
 H168N, H267A, H298N, H201L, H298Q, H298A, H268Q
 
 ### **Contoh Perintah Decoder (v2)**
