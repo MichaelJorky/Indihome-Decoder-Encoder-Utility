@@ -5,7 +5,7 @@
 > Penulis **tidak bertanggung jawab** atas penyalahgunaan, kerusakan perangkat, maupun kerugian lain yang disebabkan oleh penggunaan tool ini.
 > Gunakan hanya pada perangkat milik Anda atau yang Anda memiliki izin untuk mengaksesnya.
 
-Tool ini digunakan untuk **mendecode dan mengencode file konfigurasi** dari router OEM ZTE (Indihome, PLDT, GLOBE).
+Tool ini digunakan untuk **mendecode dan mengencode file konfigurasi** dari router OEM ZTE (Indihome, Telkomsel One, PLDT, GLOBE, MyRepublic, Biznet, MNC Play, XL Satu).
 
 💡 **Versi alternatif tersedia:**
 
@@ -163,7 +163,7 @@ python3 setup.py install --user
 
 **Kompatibel dengan router:**
 F620, F660 V2, F670, F670L, F679L, F670 V2, F672Y, F609, F660, F450, F460, MF283, F663, GM220, F600W, H108N,
-H168N, H267A, H298N, H201L, H298Q, H298A, H268Q, F680, F688, OEM ZTE (Indihome, PLDT, GLOBE)
+H168N, H267A, H298N, H201L, H298Q, H298A, H268Q, F680, F688, OEM ZTE (Indihome, Telkomsel One, PLDT, GLOBE, MyRepublic, Biznet, MNC Play, XL Satu)
 
 ### **Contoh Perintah Decoder (v2)**
 
