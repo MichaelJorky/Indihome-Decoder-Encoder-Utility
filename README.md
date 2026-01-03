@@ -1,4 +1,4 @@
-# Indihome Decoder & Encoder Utility
+# Indihome / ZTE Decoder & Encoder Utility
 
 > ⚠️ **Peringatan**
 > Alat ini dibuat **hanya untuk keperluan pendidikan dan penelitian**.
