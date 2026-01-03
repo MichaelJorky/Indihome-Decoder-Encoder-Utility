@@ -7,8 +7,13 @@
 
 Tool ini digunakan untuk **mendecode dan mengencode file konfigurasi** dari router ZTE Indihome.
 
-💡 **GUI version tersedia di sini:**
-[Indihome Router Utility](https://github.com/MichaelJorky/Indihome-Router-Utility)
+💡 **Versi alternatif tersedia:**
+
+- 🖥️ **GUI version**:  
+  https://github.com/MichaelJorky/Indihome-Router-Utility
+
+- 📦 **Portable (tanpa install Python)**:  
+  https://github.com/MichaelJorky/Indihome-ZTE-Config-Decoder-Encoder-Portable
 
 ---
 
