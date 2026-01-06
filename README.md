@@ -5,7 +5,7 @@
 > Penulis **tidak bertanggung jawab** atas penyalahgunaan, kerusakan perangkat, maupun kerugian lain yang disebabkan oleh penggunaan tool ini.
 > Gunakan hanya pada perangkat milik Anda atau yang Anda memiliki izin untuk mengaksesnya.
 
-Tool ini digunakan untuk **mendecode dan mengencode file konfigurasi** dari router OEM ZTE (Indihome, Telkomsel One, PLDT, GLOBE, MyRepublic, Biznet, MNC Play, XL Satu).
+Tool ini digunakan untuk **mendecode dan mengencode file konfigurasi** dari router OEM ZTE (IndiHome (Telkomsel), MNC Play, MyRepublic, Oxygen.id, PLDT, GLOBE, Biznet, ICONNET (PLN), XL Home, First Media, Megavision, iForte & Corpnet).
 
 💡 **Versi alternatif tersedia:**
 
